@@ -1,6 +1,4 @@
-function autospoilers() {
-//Reproduced under the MIT license
-ui.notification.showOnce("Note: spoiler arming key has now changed to shift.")
+function autospoilers()
 
 geofs.aircraft.instance.animationValue.spoilerArming = 0
 
