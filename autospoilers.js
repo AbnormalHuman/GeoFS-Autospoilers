@@ -1,6 +1,6 @@
 function autospoilers() {
 //Reproduced under the MIT license
-ui.notification.showOnce("Note: spoiler arming key has now changed to Z.")
+ui.notification.showOnce("Note: spoiler arming key has now changed to shift.")
 
 geofs.aircraft.instance.animationValue.spoilerArming = 0
 
@@ -36,7 +36,7 @@ instruments.init(geofs.aircraft.instance.setup.instruments)
 
 $(document).keydown(
     function (e) {
-        if (e.which == 90){ //spoiler arming key is "z"
+        if (e.which == 16){ //spoiler arming key is shift
             controls.setters.setSpoilerArming.set()
         }
     }
@@ -51,6 +51,7 @@ setInterval(
     },
 100)
 
+//add spoiler indicator for those planes that do not have it by themselves
 setInterval(
     function(){
         if(["3292", "3054"].includes(geofs.aircraft.instance.id) && geofs.aircraft.instance.setup.instruments["spoilers"] === undefined){
