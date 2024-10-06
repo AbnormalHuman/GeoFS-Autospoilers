@@ -42,7 +42,7 @@ $(document).keydown(
 
 setInterval(
     function(){
-        if(geofs.aircraft.instance.animationValue.spoilerArming === 1 && geofs.aircraft.instance.groundContact && controls.airbrakes.position === 0){
+        if(geofs.aircraft.instance.animationValue.spoilerArming === 1 && geofs.aircraft.instance.groundContact && controls.airbrakes.position === 0 && geofs.animation.values.thrust === 0){
             controls.setters.setAirbrakes.set();
             geofs.aircraft.instance.animationValue.spoilerArming = 0;
         }
