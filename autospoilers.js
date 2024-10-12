@@ -1,4 +1,4 @@
-function autospoilers()
+function autospoilers() {
 
 geofs.aircraft.instance.animationValue.spoilerArming = 0
 
